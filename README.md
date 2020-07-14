@@ -1,2 +1,1 @@
-# multiple-rrule-event-calendar-flutter
-How to use multiple recurrence rule (RRule) in special region using Flutter event calendar (SfCalendar)?
+**[View document in Syncfusion Flutter Knowledge base](https://www.syncfusion.com/kb/11730/how-to-use-multiple-recurrence-rule-rrule-in-special-region-using-flutter-event-calendar)**
