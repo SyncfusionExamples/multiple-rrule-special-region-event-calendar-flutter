@@ -11,19 +11,16 @@ class MyApp extends StatefulWidget {
 
 class ScheduleExample extends State<MyApp> {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: SfCalendar(
-          view: CalendarView.week,
-          dataSource: getCalendarDataSource(),
-          specialRegions: _getTimeRegions(),
+        body: SafeArea(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: getCalendarDataSource(),
+            specialRegions: _getTimeRegions(),
+          ),
         ),
       ),
     );
@@ -105,3 +102,4 @@ class _DataSource extends CalendarDataSource {
     appointments = source;
   }
 }
+
