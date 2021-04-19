@@ -11,19 +11,16 @@ class MyApp extends StatefulWidget {
 
 class ScheduleExample extends State<MyApp> {
   @override
-  void initState() {
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        body: SfCalendar(
-          view: CalendarView.week,
-          dataSource: getCalendarDataSource(),
-          specialRegions: _getTimeRegions(),
+        body: SafeArea(
+          child: SfCalendar(
+            view: CalendarView.week,
+            dataSource: getCalendarDataSource(),
+            specialRegions: _getTimeRegions(),
+          ),
         ),
       ),
     );
@@ -68,33 +65,33 @@ class ScheduleExample extends State<MyApp> {
   List<TimeRegion> _getTimeRegions() {
     final List<TimeRegion> regions = <TimeRegion>[];
     regions.add(TimeRegion(
-        startTime: DateTime(2020, 5, 29, 00, 0, 0),
-        endTime: DateTime(2020, 5, 29, 24, 0, 0),
-        recurrenceRule: 'FREQ=WEEKLY;INTERVAL=1;BYDAY=SAT,SUN',
-        color: Color(0xffbD3D3D3),
-        enablePointerInteraction: true,
-        ));
+      startTime: DateTime(2020, 5, 29, 00, 0, 0),
+      endTime: DateTime(2020, 5, 29, 24, 0, 0),
+      recurrenceRule: 'FREQ=WEEKLY;INTERVAL=1;BYDAY=SAT,SUN',
+      color: Color(0xffbD3D3D3),
+      enablePointerInteraction: true,
+    ));
     regions.add(TimeRegion(
-        startTime: DateTime(2020, 5, 29, 18, 0, 0),
-        endTime: DateTime(2020, 5, 29, 24, 0, 0),
-        recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
-        color: Color(0xffbD3D3D3),
-        enablePointerInteraction: true,
-        ));
+      startTime: DateTime(2020, 5, 29, 18, 0, 0),
+      endTime: DateTime(2020, 5, 29, 24, 0, 0),
+      recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
+      color: Color(0xffbD3D3D3),
+      enablePointerInteraction: true,
+    ));
     regions.add(TimeRegion(
-        startTime: DateTime(2020, 5, 29, 00, 0, 0),
-        endTime: DateTime(2020, 5, 29, 09, 0, 0),
-        recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
-       color: Color(0xffbD3D3D3),
-        enablePointerInteraction: true,
-        ));
+      startTime: DateTime(2020, 5, 29, 00, 0, 0),
+      endTime: DateTime(2020, 5, 29, 09, 0, 0),
+      recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
+      color: Color(0xffbD3D3D3),
+      enablePointerInteraction: true,
+    ));
     regions.add(TimeRegion(
-        startTime: DateTime(2020, 5, 29, 13, 0, 0),
-        endTime: DateTime(2020, 5, 29, 14, 0, 0),
-        recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
-        color: Color(0xffbD3D3D3),
-        enablePointerInteraction: true,
-        ));
+      startTime: DateTime(2020, 5, 29, 13, 0, 0),
+      endTime: DateTime(2020, 5, 29, 14, 0, 0),
+      recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
+      color: Color(0xffbD3D3D3),
+      enablePointerInteraction: true,
+    ));
 
     return regions;
   }
@@ -105,3 +102,4 @@ class _DataSource extends CalendarDataSource {
     appointments = source;
   }
 }
+
