@@ -1,4 +1,4 @@
-package com.example.flutter_recurrence_special
+package com.example.multiple_rrule_specialregion
 
 import io.flutter.embedding.android.FlutterActivity
 

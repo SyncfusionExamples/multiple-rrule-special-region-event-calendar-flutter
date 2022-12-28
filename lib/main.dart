@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:syncfusion_flutter_calendar/calendar.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(const MyApp());
 
 class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
   @override
   State<StatefulWidget> createState() => ScheduleExample();
 }
@@ -68,28 +69,28 @@ class ScheduleExample extends State<MyApp> {
       startTime: DateTime(2020, 5, 29, 00, 0, 0),
       endTime: DateTime(2020, 5, 29, 24, 0, 0),
       recurrenceRule: 'FREQ=WEEKLY;INTERVAL=1;BYDAY=SAT,SUN',
-      color: Color(0xffbD3D3D3),
+      color: const Color(0xffbD3D3D3),
       enablePointerInteraction: true,
     ));
     regions.add(TimeRegion(
       startTime: DateTime(2020, 5, 29, 18, 0, 0),
       endTime: DateTime(2020, 5, 29, 24, 0, 0),
       recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
-      color: Color(0xffbD3D3D3),
+      color: const Color(0xffbD3D3D3),
       enablePointerInteraction: true,
     ));
     regions.add(TimeRegion(
       startTime: DateTime(2020, 5, 29, 00, 0, 0),
       endTime: DateTime(2020, 5, 29, 09, 0, 0),
       recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
-      color: Color(0xffbD3D3D3),
+      color: const Color(0xffbD3D3D3),
       enablePointerInteraction: true,
     ));
     regions.add(TimeRegion(
       startTime: DateTime(2020, 5, 29, 13, 0, 0),
       endTime: DateTime(2020, 5, 29, 14, 0, 0),
       recurrenceRule: 'FREQ=DAILY;INTERVAL=1',
-      color: Color(0xffbD3D3D3),
+      color: const Color(0xffbD3D3D3),
       enablePointerInteraction: true,
     ));
 
@@ -102,4 +103,3 @@ class _DataSource extends CalendarDataSource {
     appointments = source;
   }
 }
-
